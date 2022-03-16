@@ -3,8 +3,10 @@
   <title>directory</title>
   <!-- styles -->
   <link rel="stylesheet" type="text/css" href="style.css"></link>
+  <script src="main.js" type="text/javascript"></script>
+
 </head>
-<body>
+<body onload="onLoad()">
   <div class="main">
     <div class="header">
       <h1>Student Information Online</h1>
@@ -20,14 +22,14 @@
     <a href=" ">Planner</a>
   </div>
   <div class="headersmall">
-    <h3>05-430 Programmable User Interfaces</h3>
+    <h3 id="course-name"></h3>
   </div>
   <div>
     <table>
       <tbody>
         <tr>
           <th id="tight">Description</th>
-          <td id="info"><span>This course is combines lecture, and an intensive programming lab and design studio. It is for those who want to express their interactive ideas in working prototypes. It will cover the importance of human-computer interaction/interface design, iterative design, input/output techniques, how to design and evaluate interfaces, and research topics that will impact user interfaces in the future. In lab, you will learn how to design and program effective graphical user interfaces, and how to perform user tests. We will cover a number of prototyping tools and require prototypes to be constructed in each, ranging from animated mock-ups to fully functional programs. Assignments will require implementing UIs, testing that interface with users, and then modifying the interface based on findings. Some class sessions will feature design reviews of student work. This course is for HCII Masters students and HCI dual majors with a minimal programming background. Students will often not be professional programmers, but will need to interact with programmers. RECITATION SELECTION: Students taking this course can sign up for either Prototyping Lab recitation. PREREQUISITES: Proficiency in a programming language, program structure, algorithm analysis, and data abstraction. Normally met through an introductory programming course using C, C++, Pascal or Java, such as 15100, 15112, 15127 or equivalent. Students entering this course should be able to independently write a 300-line program in 48 hours. Students in the HCI Additional Major have priority registration in this course and ALL students will automatically be placed on a waitlist.</span></td>
+          <td id="info"><span id="course-description"></span></td>
         </tr>
         <tr>
           <th id="tight">Key Topics</th>

@@ -1,0 +1,25 @@
+function course(name, description, keyTopics, preReq, relevance, goals) {
+    this.name = name;
+    this.description = description;
+    this.keyTopics = keyTopics;
+    this.preReq = preReq;
+    this.relevance = relevance;
+    this.goals = goals;
+}
+
+
+function Pui(name, description, keyTopics, preReq, relevance, goals) {
+    this.name = "05-430 Programmable User Interfaces"
+    this.description = "This course is combines lecture, and an intensive programming lab and design studio. It is for those who want to express their interactive ideas in working prototypes. It will cover the importance of human-computer interaction/interface design, iterative design, input/output techniques, how to design and evaluate interfaces, and research topics that will impact user interfaces in the future. In lab, you will learn how to design and program effective graphical user interfaces, and how to perform user tests. We will cover a number of prototyping tools and require prototypes to be constructed in each, ranging from animated mock-ups to fully functional programs. Assignments will require implementing UIs, testing that interface with users, and then modifying the interface based on findings. Some class sessions will feature design reviews of student work. This course is for HCII Masters students and HCI dual majors with a minimal programming background. Students will often not be professional programmers, but will need to interact with programmers. RECITATION SELECTION: Students taking this course can sign up for either Prototyping Lab recitation. PREREQUISITES: Proficiency in a programming language, program structure, algorithm analysis, and data abstraction. Normally met through an introductory programming course using C, C++, Pascal or Java, such as 15100, 15112, 15127 or equivalent. Students entering this course should be able to independently write a 300-line program in 48 hours. Students in the HCI Additional Major have priority registration in this course and ALL students will automatically be placed on a waitlist.";
+    this.keyTopics = "The course will cover the basics of rapid prototyping, discount usability, user testing, perception and cognition as related to UX design, and get a glimpse of the future of UX design";
+    this.preReq = "Proficiency in a programming language, program structure, algorithm analysis, and data abstraction. Normally met through an introductory programming course using C, C++, Pascal or Java, such as 15100, 15112, 15127 or equivalent. Students entering this course should be able to independently write a 300-line program in 48 hours.";
+    this.relevance = "Students taking this course will have a stronger grasp of concepts fundamental to UX design, including rapid prototyping, discount usability, perception and cognition, and more.";
+    this.goals = "Students will have a deeper conceptual and procedural knowledge as to how to design, implement, and evaluate user interfaces.";
+}
+function onLoad() {
+    let pui = new course ("05-430 Programmable User Interfaces","This course is combines lecture, and an intensive programming lab and design studio. It is for those who want to express their interactive ideas in working prototypes. It will cover the importance of human-computer interaction/interface design, iterative design, input/output techniques, how to design and evaluate interfaces, and research topics that will impact user interfaces in the future. In lab, you will learn how to design and program effective graphical user interfaces, and how to perform user tests. We will cover a number of prototyping tools and require prototypes to be constructed in each, ranging from animated mock-ups to fully functional programs. Assignments will require implementing UIs, testing that interface with users, and then modifying the interface based on findings. Some class sessions will feature design reviews of student work. This course is for HCII Masters students and HCI dual majors with a minimal programming background. Students will often not be professional programmers, but will need to interact with programmers. RECITATION SELECTION: Students taking this course can sign up for either Prototyping Lab recitation. PREREQUISITES: Proficiency in a programming language, program structure, algorithm analysis, and data abstraction. Normally met through an introductory programming course using C, C++, Pascal or Java, such as 15100, 15112, 15127 or equivalent. Students entering this course should be able to independently write a 300-line program in 48 hours. Students in the HCI Additional Major have priority registration in this course and ALL students will automatically be placed on a waitlist.");
+      document.getElementById("course-name").textContent = pui.name;
+      document.getElementById("course-description").textContent = pui.description;
+
+
+}
