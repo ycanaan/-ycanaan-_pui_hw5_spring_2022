@@ -23,8 +23,15 @@
   left: 185px;
 }
 
+#tid{
+  display: none;
+}
+
 #clear{
   background-color: #FFF;
+}
+.hidden{
+visibility: hidden;
 }
 
 #fade{
@@ -126,3 +133,8 @@ td > span {
   color: #F18F01;
 }
 
+.button {
+  background: #F18F01;
+  color: #FFF;
+  font-weight:bolder;
+}

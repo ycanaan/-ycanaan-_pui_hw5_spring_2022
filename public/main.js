@@ -1,13 +1,13 @@
-function course(name, description, keyTopics, preReq, relevance, goals) {
+function course(name, description, keyTopics, preReq, relevance, goals,className) {
     this.name = name;
     this.description = description;
     this.keyTopics = keyTopics;
     this.preReq = preReq;
     this.relevance = relevance;
     this.goals = goals;
+    this.className = "classA";
 }
 
-document.getElementById("tid").style.display = "none";
 
 function coursesList() {
     var pui = new course ("05-430 Programmable User Interfaces","This course is combines lecture, and an intensive programming lab and design studio. It is for those who want to express their interactive ideas in working prototypes. It will cover the importance of human-computer interaction/interface design, iterative design, input/output techniques, how to design and evaluate interfaces, and research topics that will impact user interfaces in the future. In lab, you will learn how to design and program effective graphical user interfaces, and how to perform user tests. We will cover a number of prototyping tools and require prototypes to be constructed in each, ranging from animated mock-ups to fully functional programs. Assignments will require implementing UIs, testing that interface with users, and then modifying the interface based on findings. Some class sessions will feature design reviews of student work. This course is for HCII Masters students and HCI dual majors with a minimal programming background. Students will often not be professional programmers, but will need to interact with programmers. RECITATION SELECTION: Students taking this course can sign up for either Prototyping Lab recitation. PREREQUISITES: Proficiency in a programming language, program structure, algorithm analysis, and data abstraction. Normally met through an introductory programming course using C, C++, Pascal or Java, such as 15100, 15112, 15127 or equivalent. Students entering this course should be able to independently write a 300-line program in 48 hours. Students in the HCI Additional Major have priority registration in this course and ALL students will automatically be placed on a waitlist.","The course will cover the basics of rapid prototyping, discount usability, user testing, perception and cognition as related to UX design, and get a glimpse of the future of UX design","Proficiency in a programming language, program structure, algorithm analysis, and data abstraction. Normally met through an introductory programming course using C, C++, Pascal or Java, such as 15100, 15112, 15127 or equivalent. Students entering this course should be able to independently write a 300-line program in 48 hours.","Students taking this course will have a stronger grasp of concepts fundamental to UX design, including rapid prototyping, discount usability, perception and cognition, and more.","Students will have a deeper conceptual and procedural knowledge as to how to design, implement, and evaluate user interfaces.");
@@ -20,6 +20,8 @@ function coursesList() {
       document.getElementById("pid").style.display = "none";
 
 }
+var myCourses=[];
+var current_course_id = 0;
 
 function showCourse(){
       document.getElementById("course-name").textContent = courses[0].name;
@@ -38,6 +40,7 @@ function test(){
     var thesis = new course ("05-571 Undergraduate Project in HCI","Experiential learning is a key component of the MHCI program. Through a substantial team project, students apply classroom knowledge in analysis and evaluation, implementation and design, and develop skills working in multidisciplinary teams. Student teams work with Carnegie Mellon University-based clients or external clients to iteratively design, build and test a software application which people directly use.","A semester-long capstone project for students in the HCI 2nd major that integrates everything the students have learned in their coursework into one end-to-end experience.","Students must be in a position to finish the HCI 2nd major by the end of the semester.","Students work in interdisciplinary teams for a client to produce a working prototype that serves as a proof of concept of a novel service or product idea.","Understand how user-centered research, interaction design, prototyping, and testing with users can be combined effectively to solve significant problems");
     var hcielec = new course ("05-589 Independent Study in HCI","In collaboration with and with the permission of the professor, undergraduate students may engage in independent project work on any number of research projects sponsored by faculty. Students must complete an Independent Study Proposal, negotiate the number of units to be earned, complete a contract, and present a tangible deliverable. The Undergraduate Program Advisor's signature is required for HCI undergraduate-level Independent Study courses. When registering for this course, undergraduate students are automatically placed the waitlist. Please note this course is ONLY for students currently in the HCI Additional Major.","This is based on the individual study the student is working on. Students create a proposal with learning objectives, time commitments, and deliverables with the faculty member they are working with.","This is based on the individual study the student is working on. Students create a proposal with learning objectives, time commitments, and deliverables with the faculty member they are working with.","This is based on the individual study the student is working on. Students create a proposal with learning objectives, time commitments, and deliverables with the faculty member they are working with.","This is based on the individual study the student is working on. Students create a proposal with learning objectives, time commitments, and deliverables with the faculty member they are working with.");
     var courses=[pui,ixdi,ixdii,ucre,thesis,hcielec];
+    current_course_id = id;
       document.getElementById("course-name").textContent = courses[id].name;
       document.getElementById("course-description").textContent = courses[id].description;
       document.getElementById("key-topics").textContent = courses[id].keyTopics;
@@ -45,5 +48,12 @@ function test(){
       document.getElementById("relev").textContent = courses[id].relevance;
       document.getElementById("course-goals").textContent = courses[id].goals;
       document.getElementById("pid").style.display = "none";
+      document.getElementById("tid").style.display="block";
+
+}
+
+function addCourse(){
+    myCourses.push(current_course_id);
+    console.log(myCourses);
 
 }
