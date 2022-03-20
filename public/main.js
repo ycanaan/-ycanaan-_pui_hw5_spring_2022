@@ -17,19 +17,19 @@ function coursesList() {
     var thesis = new course ("05-571 Undergraduate Project in HCI","Experiential learning is a key component of the MHCI program. Through a substantial team project, students apply classroom knowledge in analysis and evaluation, implementation and design, and develop skills working in multidisciplinary teams. Student teams work with Carnegie Mellon University-based clients or external clients to iteratively design, build and test a software application which people directly use.","A semester-long capstone project for students in the HCI 2nd major that integrates everything the students have learned in their coursework into one end-to-end experience.","Students must be in a position to finish the HCI 2nd major by the end of the semester.","Students work in interdisciplinary teams for a client to produce a working prototype that serves as a proof of concept of a novel service or product idea.","Understand how user-centered research, interaction design, prototyping, and testing with users can be combined effectively to solve significant problems");
     var hcielec = new course ("05-589 Independent Study in HCI","In collaboration with and with the permission of the professor, undergraduate students may engage in independent project work on any number of research projects sponsored by faculty. Students must complete an Independent Study Proposal, negotiate the number of units to be earned, complete a contract, and present a tangible deliverable. The Undergraduate Program Advisor's signature is required for HCI undergraduate-level Independent Study courses. When registering for this course, undergraduate students are automatically placed the waitlist. Please note this course is ONLY for students currently in the HCI Additional Major.","This is based on the individual study the student is working on. Students create a proposal with learning objectives, time commitments, and deliverables with the faculty member they are working with.","This is based on the individual study the student is working on. Students create a proposal with learning objectives, time commitments, and deliverables with the faculty member they are working with.","This is based on the individual study the student is working on. Students create a proposal with learning objectives, time commitments, and deliverables with the faculty member they are working with.","This is based on the individual study the student is working on. Students create a proposal with learning objectives, time commitments, and deliverables with the faculty member they are working with.");
     var courses=[pui,ixdi,ixdii,ucre,thesis,hcielec];
-      document.getElementById("pid").style.display = "none";
+    document.getElementById("pid").style.display = "none";
 
 }
 var myCourses=[];
 var current_course_id = 0;
 
 function showCourse(){
-      document.getElementById("course-name").textContent = courses[0].name;
-      document.getElementById("course-description").textContent = courses[0].description;
-      document.getElementById("key-topics").textContent = courses[0].keyTopics;
-      document.getElementById("pre-req").textContent = courses[0].preReq;
-      document.getElementById("relev").textContent = courses[0].relevance;
-      document.getElementById("course-goals").textContent = courses[0].goals;
+  document.getElementById("course-name").textContent = courses[0].name;
+  document.getElementById("course-description").textContent = courses[0].description;
+  document.getElementById("key-topics").textContent = courses[0].keyTopics;
+  document.getElementById("pre-req").textContent = courses[0].preReq;
+  document.getElementById("relev").textContent = courses[0].relevance;
+  document.getElementById("course-goals").textContent = courses[0].goals;
 }
 
 function test(){
@@ -41,14 +41,14 @@ function test(){
     var hcielec = new course ("05-589 Independent Study in HCI","In collaboration with and with the permission of the professor, undergraduate students may engage in independent project work on any number of research projects sponsored by faculty. Students must complete an Independent Study Proposal, negotiate the number of units to be earned, complete a contract, and present a tangible deliverable. The Undergraduate Program Advisor's signature is required for HCI undergraduate-level Independent Study courses. When registering for this course, undergraduate students are automatically placed the waitlist. Please note this course is ONLY for students currently in the HCI Additional Major.","This is based on the individual study the student is working on. Students create a proposal with learning objectives, time commitments, and deliverables with the faculty member they are working with.","This is based on the individual study the student is working on. Students create a proposal with learning objectives, time commitments, and deliverables with the faculty member they are working with.","This is based on the individual study the student is working on. Students create a proposal with learning objectives, time commitments, and deliverables with the faculty member they are working with.","This is based on the individual study the student is working on. Students create a proposal with learning objectives, time commitments, and deliverables with the faculty member they are working with.");
     var courses=[pui,ixdi,ixdii,ucre,thesis,hcielec];
     current_course_id = id;
-      document.getElementById("course-name").textContent = courses[id].name;
-      document.getElementById("course-description").textContent = courses[id].description;
-      document.getElementById("key-topics").textContent = courses[id].keyTopics;
-      document.getElementById("pre-req").textContent = courses[id].preReq;
-      document.getElementById("relev").textContent = courses[id].relevance;
-      document.getElementById("course-goals").textContent = courses[id].goals;
-      document.getElementById("pid").style.display = "none";
-      document.getElementById("tid").style.display="block";
+    document.getElementById("course-name").textContent = courses[id].name;
+    document.getElementById("course-description").textContent = courses[id].description;
+    document.getElementById("key-topics").textContent = courses[id].keyTopics;
+    document.getElementById("pre-req").textContent = courses[id].preReq;
+    document.getElementById("relev").textContent = courses[id].relevance;
+    document.getElementById("course-goals").textContent = courses[id].goals;
+    document.getElementById("pid").style.display = "none";
+    document.getElementById("tid").style.display="block";
 
 }
 
@@ -57,3 +57,14 @@ function addCourse(){
     console.log(myCourses);
 
 }
+
+function change_text(){
+    document.getElementById("button").innerHTML = "Course Added!";
+}
+
+function clickAndDisable(link) {
+   link.onclick = function(event) {
+    event.preventDefault();
+}
+}
+
