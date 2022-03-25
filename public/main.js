@@ -58,7 +58,7 @@ function addCourse(){
     localStorage.setItem("savedCourses", JSON.stringify(myCourses));
     console.log(localStorage);
     if (myCourses.includes(0)){
-        alert("pui is added!")
+        alert("pui is added!");
         document.getElementById("pui").className =("show");
     }
 //    else {
