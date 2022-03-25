@@ -55,8 +55,15 @@ function test(){
 function addCourse(){
     myCourses.push(current_course_id);
     console.log(myCourses);
-
+    localStorage.setItem("savedCourses", JSON.stringify(myCourses));
+    if (myCourses === 0)
+        document.getElementById("pui").className ="show";
+    else {
+        document.getElementById("pui").className ="hidden";
+    }
 }
+
+
 
 function change_text(){
     document.getElementById("button").innerHTML = "Course Added!";
