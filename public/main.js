@@ -56,11 +56,14 @@ function addCourse(){
     myCourses.push(current_course_id);
     console.log(myCourses);
     localStorage.setItem("savedCourses", JSON.stringify(myCourses));
-    if (myCourses === 0)
-        document.getElementById("pui").className ="show";
-    else {
-        document.getElementById("pui").className ="hidden";
+    console.log(localStorage);
+    if (myCourses.includes(0)){
+        alert("pui is added!")
+        document.getElementById("pui").className =("show");
     }
+//    else {
+//        document.getElementById("pui").className ="hidden";
+//    }
 }
 
 
