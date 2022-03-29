@@ -57,15 +57,21 @@ function addCourse(){
     console.log(myCourses);
     localStorage.setItem("savedCourses", JSON.stringify(myCourses));
     console.log(localStorage);
-    if (myCourses.includes(0)){
-        alert("pui is added!");
-        document.getElementById("pui").className =("show");
-    }
-//    else {
-//        document.getElementById("pui").className ="hidden";
-//    }
 }
+function showSchedule() {
 
+    myCourses = JSON.parse(localStorage.getItem("savedCourses"));
+    console.log(myCourses);
+    if (myCourses.includes(0)){
+        //alert("pui is added!");
+        document.getElementById("pui").className =("show");
+        document.getElementById("pui2").className =("show");
+    }
+    if (myCourses.includes(1)){
+        document.getElementById("ixd").className =("show");
+        document.getElementById("ixd1").className =("show");
+    }
+}
 
 
 function change_text(){
