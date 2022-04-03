@@ -35,7 +35,9 @@
 }
 
 .show{
-  color: blue;
+  background: #D2D7DF;
+  color: #000;
+  font-family: 'Lato', sans-serif;
 }
 
 #fade{

@@ -52,6 +52,8 @@ function test(){
 
 }
 
+
+
 function addCourse(){
     myCourses.push(current_course_id);
     console.log(myCourses);
@@ -70,6 +72,10 @@ function showSchedule() {
     if (myCourses.includes(1)){
         document.getElementById("ixd").className =("show");
         document.getElementById("ixd1").className =("show");
+    }
+    if (myCourses.includes(2)){
+        document.getElementById("ixd2").className =("show");
+        document.getElementById("ixd3").className =("show");
     }
 }
 
