@@ -1,1 +1,4 @@
-c
+This website is meant to allow students to see their schedule, read about available courses, add them to their schedule and remove them from their schedule. Index.html shows the schedule page and what courses are currently added. If the schedule is blank then there are no courses stored. Clicking courses on the sidebar takes you to directory.html and where you can see all available courses to add. Clicking more info brings you to the detailed page for each course. From there, you can add the course if you want or remove it from the schedule. Once added or removed, all changes will reflect in the schedule page (index.html). 
+	Bonus:
+	All product pages present a high level of detail and are all interactive.
+	There’s a variety of interesting and useful javascript implemented in the website design.
